@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brgt-org: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --vdark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --vlight-gray: hsl(0, 0%, 95%);
+}
+
+body { font-family: 'Lexend Deca', sans-serif; }
+
+header { margin: 3rem 0; }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link {
+  color: var(--dark-cyan);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--brgt-org);
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--dark-cyan);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  color: var(--vlight-gray);
+  font-family: 'Big Shoulders Display', cursive;
+  margin-bottom: 2rem;
+}
+
+.sedan { background-color: var(--brgt-org); }
+.sedan .button { color:  var(--brgt-org); }
+
+.suv { background-color: var(--dark-cyan); }
+.suv .button { color:  var(--dark-cyan); }
+
+.luxury { background-color: var(--vdark-cyan); }
+.luxury .button { color:  var(--vdark-cyan); }
+
+.button {
+  background-color: white;
+  border: none;
+  border-radius: 3rem;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--vlight-gray);
+  background-color: unset;
+  border: 1.5px solid white;
+}
+
+@media (max-width:1440px){
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    margin: 0 auto
+  }
+
+  .flex-container div p {
+    color: var(--trans-white);
+    font-size:90%;
+    line-height: 1.6;
+    margin-bottom: 5rem;
+  }
+  
+  .flex-container section div {
+    width: 300px;
+    padding: 3rem;
+  }
+  
+  .img {margin-bottom: 2rem;}
+  
+  .section-title {font-size: 2rem;}
+
+  footer {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    color: white;
+    margin-top: 4rem;
+    padding: 3rem;
+    background-color: var(--dark-cyan);
+  }
+
+  footer a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  footer ul{
+    list-style: none;
+  }
+
+  footer h3 { 
+      color: var(--brgt-org); 
+      padding-bottom: 1vw;
+  }
+  
+  .socials {
+      display: flex;
+      gap: 1.2rem;
+  }
+}
+
+@media (max-width:900px){
+  .container {
+    height: unset;
+  }
+  
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:500px){
+  footer {
+    flex-direction: column;
+  }
+}
